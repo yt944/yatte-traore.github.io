@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Yatté Traoré</title>
+  <meta name="description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance, Portfolio Wix — BTS SIO.">
+  <meta name="keywords" content="Yatté Traoré, BTS SIO, SISR, portfolio, systèmes réseaux, Active Directory, Paris, alternance">
+  <meta name="author" content="Yatté Traoré">
+  <meta property="og:title" content="Projets — Yatté Traoré">
+  <meta property="og:description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance, Portfolio Wix — BTS SIO.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e8580c'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='14' font-weight='700' font-family='sans-serif'>YT</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #faf7f2;
+      --bg2: #f2ede4;
+      --bg3: #e8e0d4;
+      --accent: #e8580c;
+      --accent2: #8b3cf7;
+      --accent3: #0891b2;
+      --text: #1a1410;
+      --muted: #6b6058;
+      --border: rgba(26,20,16,0.1);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(250,247,242,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; transition: color 0.2s; }
+    .nav-logo:hover { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; position: relative; padding-bottom: 4px; transition: color 0.25s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.25s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; text-decoration: none; font-family: var(--font-display); transition: transform 0.2s, box-shadow 0.2s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(249,115,22,0.3); }.page-header { padding: 8rem 3rem 3rem; border-bottom: 1px solid var(--border); position: relative; background: linear-gradient(135deg, rgba(250,247,242,0.90) 0%, rgba(250,247,242,0.72) 100%), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80') center/cover no-repeat; }
+    .page-header .page-tag, .page-header .page-title, .page-header .page-desc { position: relative; z-index: 1; }
+    .page-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .page-tag::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1rem; }
+    .page-desc { color: var(--muted); max-width: 540px; line-height: 1.7; }
+    .page-content { padding: 4rem 3rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #e8580c, #8b3cf7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+    .project-card:hover { border-color: rgba(249,115,22,0.25); transform: translateY(-3px); }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-num { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; color: var(--accent); opacity: 0.6; margin-bottom: 1rem; letter-spacing: 0.1em; }
+    .project-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; }
+    .project-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+    .tag { background: var(--bg3); border: 1px solid var(--border); padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.75rem; color: var(--muted); }
+    .project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; transition: gap 0.2s; }
+    .project-link:hover { gap: 0.7rem; }
+    footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .page-header, .page-content { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .wave-sep { width: 100%; overflow: hidden; line-height: 0; margin: 0; display: block; }
+    .wave-sep svg { display: block; width: 100%; }
+    .wave-sep-flip { transform: rotate(180deg); }
+
+  
+    /* BACK TO TOP */
+    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s, box-shadow 0.2s; z-index: 200; box-shadow: 0 4px 14px rgba(232,88,12,0.3); }
+    .back-top.visible { opacity: 1; transform: translateY(0); }
+    .back-top:hover { box-shadow: 0 6px 20px rgba(232,88,12,0.45); transform: translateY(-2px); }
+    .back-top svg { width: 18px; height: 18px; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; z-index: 99; flex-direction: column; gap: 0; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); }
+    @media (max-width: 768px) { .nav-links { display: none !important; } .hamburger { display: flex; } .nav-cta { display: none; } }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">TRAORE Yatte</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">Presentation</a></li>
+      <li><a href="general-5.html">CV</a></li>
+      <li><a href="projets.html" class="active">Projets</a></li>
+      <li><a href="e5.html">E5</a></li>
+      <li><a href="e6.html">E6</a></li>
+      <li><a href="veilles.html">Veilles</a></li>
+    </ul>
+    <a href="/cdn-cgi/l/email-protection#9de9effcf2eff8e4fce9e9f8ddfaf0fcf4f1b3fef2f0" class="nav-cta">Contact</a>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-tag reveal">Projets</div>
+    <h1 class="page-title reveal">Mes réalisations</h1>
+    <p class="page-desc">5 projets techniques réalisés dans le cadre de mon BTS SIO.</p>
+  </div>
+
+  <div class="wave-sep" style="background:#f2ede4;"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,20 C360,55 1080,5 1440,35 L1440,60 L0,60 Z" fill="#faf7f2"/></svg></div>
+<div class="page-content">
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-num">01</div>
+        <div class="project-title">Application d'une GPO</div>
+        <div class="project-desc">Définition de règles de sécurité et d'environnements de travail uniformes, appliqués automatiquement à des groupes d'utilisateurs depuis un serveur central.</div>
+        <div class="project-tags"><span class="tag">GPO</span><span class="tag">Sécurité</span><span class="tag">Active Directory</span></div>
+        <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_8b6e65d915e04dda8afe1c40a927175c.pdf" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">02</div>
+        <div class="project-title">Projet de Virtualisation</div>
+        <div class="project-desc">Permettre aux utilisateurs d'accéder à différents systèmes d'exploitation (Linux et Windows) en fonction de leurs besoins via des machines virtuelles.</div>
+        <div class="project-tags"><span class="tag">VM</span><span class="tag">Linux</span><span class="tag">Windows</span></div>
+        <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_c64e40f02a264fafb2699fd242cf3092.pdf" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-num">03</div>
+        <div class="project-title">Portfolio Professionnel sous Wix</div>
+        <div class="project-desc">Concevoir et déployer une plateforme numérique centralisée afin de présenter mon parcours et mes compétences pour l'épreuve E4 du BTS SIO.</div>
+        <div class="project-tags"><span class="tag">Wix</span><span class="tag">Web</span><span class="tag">E4 BTS SIO</span></div>
+        <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_11f7076037364c79981fde05b73334f8.pdf" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">04</div>
+        <div class="project-title">Déploiement Active Directory</div>
+        <div class="project-desc">Centraliser la gestion des ressources informatiques d'une organisation en mettant en place un annuaire AD DS sous Windows Server.</div>
+        <div class="project-tags"><span class="tag">Windows Server</span><span class="tag">AD DS</span><span class="tag">DNS</span></div>
+        <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_e4087708f9cc4ada83df918566b825e5.pdf" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">05</div>
+        <div class="project-title">Bureau à distance</div>
+        <div class="project-desc">Mise en place d'une solution de prise en main à distance pour l'administration et le support des postes utilisateurs.</div>
+        <div class="project-tags"><span class="tag">RDP</span><span class="tag">Administration</span><span class="tag">Support</span></div>
+        <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_e27eb6d1f22f42e6a0edd7a5de5d41e8.pdf" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
+      
+  </div>
+
+  <footer>
+    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6c2c4d7d9c4d3cfd7c2c2d3f6d1dbd7dfda98d5d9db">[email&#160;protected]

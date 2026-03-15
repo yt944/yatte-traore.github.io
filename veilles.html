@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veilles technologiques — Yatté Traoré</title>
+  <meta name="description" content="Veilles technologiques de Yatté Traoré : 6G, cybersécurité, cloud et virtualisation — BTS SIO Paris.">
+  <meta name="keywords" content="Yatté Traoré, BTS SIO, SISR, portfolio, systèmes réseaux, Active Directory, Paris, alternance">
+  <meta name="author" content="Yatté Traoré">
+  <meta property="og:title" content="Veilles technologiques — Yatté Traoré">
+  <meta property="og:description" content="Veilles technologiques de Yatté Traoré : 6G, cybersécurité, cloud et virtualisation — BTS SIO Paris.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e8580c'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='14' font-weight='700' font-family='sans-serif'>YT</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #faf7f2;
+      --bg2: #f2ede4;
+      --bg3: #e8e0d4;
+      --accent: #e8580c;
+      --accent2: #8b3cf7;
+      --accent3: #0891b2;
+      --text: #1a1410;
+      --muted: #6b6058;
+      --border: rgba(26,20,16,0.1);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(250,247,242,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; transition: color 0.2s; }
+    .nav-logo:hover { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; position: relative; padding-bottom: 4px; transition: color 0.25s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.25s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; text-decoration: none; font-family: var(--font-display); transition: transform 0.2s, box-shadow 0.2s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(249,115,22,0.3); }.page-header { padding: 8rem 3rem 3rem; border-bottom: 1px solid var(--border); position: relative; background: linear-gradient(135deg, rgba(250,247,242,0.90) 0%, rgba(250,247,242,0.72) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80') center/cover no-repeat; }
+    .page-header .page-tag, .page-header .page-title, .page-header .page-desc { position: relative; z-index: 1; }
+    .page-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .page-tag::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1rem; }
+    .page-desc { color: var(--muted); max-width: 540px; line-height: 1.7; }
+    .page-content { padding: 4rem 3rem; }
+    .veille-hero { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .veille-hero-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .veille-hero-sub { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 420px; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 0.8rem 2rem; border-radius: 100px; font-weight: 600; font-size: 0.9rem; text-decoration: none; font-family: var(--font-display); display: inline-flex; align-items: center; gap: 0.5rem; transition: opacity 0.2s; white-space: nowrap; }
+    .btn-primary:hover { opacity: 0.85; }
+    .veilles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .veille-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 1.8rem; transition: border-color 0.2s, transform 0.2s; }
+    .veille-card:hover { border-color: rgba(168,85,247,0.3); transform: translateY(-2px); }
+    .veille-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--bg3); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
+    .veille-card-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.8rem; }
+    .veille-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .veille-list li { font-size: 0.85rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.5rem; }
+    .veille-list li::before { content: '→'; color: var(--accent); font-size: 0.75rem; flex-shrink: 0; margin-top: 0.1rem; }
+    footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .page-header, .page-content { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .wave-sep { width: 100%; overflow: hidden; line-height: 0; margin: 0; display: block; }
+    .wave-sep svg { display: block; width: 100%; }
+    .wave-sep-flip { transform: rotate(180deg); }
+
+  
+    /* BACK TO TOP */
+    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s, box-shadow 0.2s; z-index: 200; box-shadow: 0 4px 14px rgba(232,88,12,0.3); }
+    .back-top.visible { opacity: 1; transform: translateY(0); }
+    .back-top:hover { box-shadow: 0 6px 20px rgba(232,88,12,0.45); transform: translateY(-2px); }
+    .back-top svg { width: 18px; height: 18px; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; z-index: 99; flex-direction: column; gap: 0; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); }
+    @media (max-width: 768px) { .nav-links { display: none !important; } .hamburger { display: flex; } .nav-cta { display: none; } }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">TRAORE Yatte</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">Presentation</a></li>
+      <li><a href="general-5.html">CV</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="e5.html">E5</a></li>
+      <li><a href="e6.html">E6</a></li>
+      <li><a href="veilles.html" class="active">Veilles</a></li>
+    </ul>
+    <a href="/cdn-cgi/l/email-protection#384c4a59574a5d41594c4c5d785f55595154165b5755" class="nav-cta">Contact</a>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-tag">Veilles technologiques</div>
+    <h1 class="page-title">Ma veille IT</h1>
+    <p class="page-desc">Sujets que je suis activement pour rester à jour dans le domaine de l'informatique et des nouvelles technologies.</p>
+  </div>
+
+  <div class="wave-sep" style="background:#f2ede4;"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,35 C480,5 960,55 1440,20 L1440,60 L0,60 Z" fill="#faf7f2"/></svg></div>
+<div class="page-content">
+    <!-- Veille principale : 6G -->
+    <div class="veille-hero reveal">
+      <div>
+        <div class="veille-card-title" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-bottom:0.6rem;">Veille principale</div>
+        <div class="veille-hero-title">La 6G — L'avenir des communications</div>
+        <p class="veille-hero-sub">La 6G désigne la sixième génération de technologies de communication sans fil. Elle promet des vitesses révolutionnaires, une intelligence artificielle intégrée et de nouvelles usages comme l'holographie.</p>
+      </div>
+      <a href="https://eacd6821-4eff-43d0-87bb-eebdd86f5f54.filesusr.com/ugd/667df2_05967980d74c44678572eb07002de55d.pptx" target="_blank" class="btn-primary">Voir la présentation →</a>
+    </div>
+
+    <!-- Cards thématiques -->
+    <div class="veilles-grid">
+      <div class="veille-card reveal">
+        <div class="veille-icon">📡</div>
+        <div class="veille-card-title">Caractéristiques de la 6G</div>
+        <ul class="veille-list">
+          <li>Communications spatiales</li>
+          <li>Intelligence artificielle intégrée</li>
+          <li>Holographie</li>
+          <li>Capteurs omniprésents</li>
+        </ul>
+      </div>
+      <div class="veille-card reveal reveal-delay-1">
+        <div class="veille-icon">✅</div>
+        <div class="veille-card-title">Avantages</div>
+        <ul class="veille-list">
+          <li>Révolution médicale</li>
+          <li>Éducation immersive</li>
+          <li>Villes intelligentes</li>
+        </ul>
+      </div>
+      <div class="veille-card reveal reveal-delay-2">
+        <div class="veille-icon">⚠️</div>
+        <div class="veille-card-title">Inconvénients</div>
+        <ul class="veille-list">
+          <li>Infrastructure coûteuse</li>
+          <li>Consommation énergétique élevée</li>
+        </ul>
+      </div>
+      <div class="veille-card reveal">
+        <div class="veille-icon">⚖️</div>
+        <div class="veille-card-title">Dimension juridique</div>
+        <ul class="veille-list">
+          <li>Protection des données</li>
+          <li>Responsabilité de l'IA</li>
+        </ul>
+      </div>
+      <div class="veille-card reveal reveal-delay-1">
+        <div class="veille-icon">💰</div>
+        <div class="veille-card-title">Dimension économique</div>
+        <ul class="veille-list">
+          <li>Investissement global massif</li>
+          <li>Croissance du marché</li>
+          <li>Création de nouveaux emplois</li>
+        </ul>
+      </div>
+      <div class="veille-card reveal reveal-delay-2">
+        <div class="veille-icon">🔐</div>
+        <div class="veille-card-title">Cybersécurité</div>
+        <ul class="veille-list">
+          <li>Nouvelles menaces et vulnérabilités</li>
+          <li>Bonnes pratiques de sécurité</li>
+          <li>Sécurité des systèmes d'information</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="205452414f5245594154544560474d41494c0e434f4d">[email&#160;protected]
