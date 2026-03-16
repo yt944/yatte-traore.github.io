@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Présentation — Yatté Traoré</title>
+  <meta name="description" content="Découvrez le parcours de Yatté Traoré : Lycée Jean Macé, Paris School Technology & Business, alternances chez Mon Juridique et Labrenne.">
+  <meta name="keywords" content="Yatté Traoré, BTS SIO, SISR, portfolio, systèmes réseaux, Active Directory, Paris, alternance">
+  <meta name="author" content="Yatté Traoré">
+  <meta property="og:title" content="Présentation — Yatté Traoré">
+  <meta property="og:description" content="Découvrez le parcours de Yatté Traoré : Lycée Jean Macé, Paris School Technology & Business, alternances chez Mon Juridique et Labrenne.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e8580c'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='14' font-weight='700' font-family='sans-serif'>YT</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #faf7f2; --bg2: #f2ede4; --bg3: #e8e0d4; --accent: #e8580c; --accent2: #8b3cf7; --text: #1a1410; --muted: #6b6058; --border: rgba(26,20,16,0.1); --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(250,247,242,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; transition: color 0.2s; }
+    .nav-logo:hover { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; position: relative; padding-bottom: 4px; transition: color 0.25s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.25s ease; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; text-decoration: none; font-family: var(--font-display); transition: transform 0.2s, box-shadow 0.2s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(232,88,12,0.3); }
+
+    /* HERO BANNER */
+    .hero-banner { margin-top: 70px; height: 320px; position: relative; overflow: hidden; }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-banner-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(250,247,242,0.6) 0%, rgba(250,247,242,0.2) 100%); display: flex; align-items: flex-end; padding: 2rem 3rem; }
+    .hero-banner-text { position: relative; z-index: 1; }
+    .page-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .page-tag::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
+    .page-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: var(--text); }
+
+    .wave { width: 100%; overflow: hidden; line-height: 0; display: block; background: var(--bg2); }
+    .wave svg { display: block; width: 100%; }
+
+    .page-content { padding: 4rem 3rem; }
+
+    /* INTRO */
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+    .intro-img { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(232,88,12,0.1); border: 1px solid var(--border); }
+    .intro-img img { width: 100%; height: 280px; object-fit: cover; display: block; }
+    .intro-text h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: var(--text); }
+    .intro-text p { color: var(--muted); line-height: 1.8; font-size: 1rem; }
+
+    /* TIMELINE PARCOURS */
+    .parcours-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 2.5rem; color: var(--text); display: flex; align-items: center; gap: 1rem; }
+    .parcours-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
+
+    .parcours-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .parcours-item { display: grid; grid-template-columns: 80px 60px 1fr; gap: 1.5rem; align-items: start; }
+    .parcours-year { font-size: 0.78rem; color: var(--muted); font-family: var(--font-display); padding-top: 0.3rem; }
+    .parcours-logo-wrap { width: 60px; height: 60px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .parcours-logo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .parcours-logo-wrap.no-img { background: var(--bg3); font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--accent); }
+    .parcours-content { padding-top: 0.2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    .parcours-item:last-child .parcours-content { border-bottom: none; }
+    .parcours-org { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+    .parcours-org a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    .parcours-org a:hover { color: var(--accent); }
+    .parcours-role { font-size: 0.82rem; color: var(--accent); font-weight: 500; margin-bottom: 0.5rem; }
+    .parcours-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+    footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    .reveal { opacity: 1; transform: none; }
+      
+    
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; } .nav-links { display: none; }
+      .page-content { padding: 2rem 1.5rem; }
+      .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .parcours-item { grid-template-columns: 60px 1fr; }
+      .parcours-year { display: none; }
+      footer { padding: 1.5rem; }
+    }
+  
+    /* BACK TO TOP */
+    .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 1; transform: none; transition: box-shadow 0.2s; z-index: 200; box-shadow: 0 4px 14px rgba(232,88,12,0.3); }
+    
+    .back-top:hover { box-shadow: 0 6px 20px rgba(232,88,12,0.45); transform: translateY(-2px); }
+    .back-top svg { width: 18px; height: 18px; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; background: rgba(250,247,242,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; z-index: 99; flex-direction: column; gap: 0; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); }
+    @media (max-width: 768px) { .nav-links { display: none !important; } .hamburger { display: flex; } .nav-cta { display: none; } }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">TRAORE Yatte</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html" class="active">Presentation</a></li>
+      <li><a href="general-5.html">CV</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="e5.html">E5</a></li>
+      <li><a href="e6.html">E6</a></li>
+      <li><a href="veilles.html">Veilles</a></li>
+    </ul>
+    <a href="/cdn-cgi/l/email-protection#bcc8ceddd3ced9c5ddc8c8d9fcdbd1ddd5d092dfd3d1" class="nav-cta">Contact</a>
+  </nav>
+
+  <!-- HERO BANNER avec image Wix originale -->
+  <div class="hero-banner">
+    <img src="https://static.wixstatic.com/media/11062b_538e5aeca4804c129d6b84411d05139d~mv2.jpg" alt="Bannière présentation" />
+    <div class="hero-banner-overlay">
+      <div class="hero-banner-text">
+        <div class="page-tag">Présentation</div>
+        <h1 class="page-title">Qui suis-je ?</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="wave"><svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,25 C480,60 960,0 1440,30 L1440,40 L0,40 Z" fill="#faf7f2"/></svg></div>
+
+  <div class="page-content">
+
+    <!-- INTRO -->
+    <div class="intro-grid" id="r0">
+      <div class="intro-img">
+        <img src="https://static.wixstatic.com/media/11062b_e6d34c816aa7425bbe8c6be8f73e50b1~mv2.jpg" alt="White Structure" />
+      </div>
+      <div class="intro-text">
+        <h2>TRAORE Yatté</h2>
+        <p>Je suis étudiant en deuxième année de <strong style="color:var(--text)">BTS SIO</strong>, passionné par les systèmes informatiques depuis mon plus jeune âge. Je souhaite me spécialiser dans ce domaine pour y faire carrière et contribuer à des infrastructures IT fiables et sécurisées.</p>
+      </div>
+    </div>
+
+    <!-- PARCOURS -->
+    <div class="reveal d1" id="r1">
+      <div class="parcours-title">Formation</div>
+      <div class="parcours-list">
+
+        <!-- Lycée Jean Macé -->
+        <div class="parcours-item" id="r2">
+          <div class="parcours-year">2021 – 2024</div>
+          <div class="parcours-logo-wrap">
+            <img src="https://static.wixstatic.com/media/667df2_45e679282056495496939dd5fe32afa0~mv2.jpg" alt="Lycée Jean Macé" />
+          </div>
+          <div class="parcours-content">
+            <div class="parcours-org"><a href="https://lyceejeanmace-vitry.fr/" target="_blank">Lycée Jean Macé — Vitry-sur-Seine</a></div>
+            <div class="parcours-role">Baccalauréat Général</div>
+            <div class="parcours-desc">Spécialités Mathématiques et Sciences de l'ingénieur. Ce choix m'a préparé aux études en ingénierie, informatique et technologies, et m'a permis d'acquérir des compétences essentielles pour innover et résoudre des défis techniques.</div>
+          </div>
+        </div>
+
+        <!-- Paris School T&B -->
+        <div class="parcours-item" id="r3">
+          <div class="parcours-year">2024 – Présent</div>
+          <div class="parcours-logo-wrap">
+            <img src="https://static.wixstatic.com/media/667df2_404693331d9a418d97eefde0184d71da~mv2.jpg" alt="Paris School Technology & Business" />
+          </div>
+          <div class="parcours-content">
+            <div class="parcours-org"><a href="https://www.pstb.fr/" target="_blank">Paris School Technology & Business</a></div>
+            <div class="parcours-role">BTS SIO — Option SISR</div>
+            <div class="parcours-desc">Titulaire d'un Baccalauréat Scientifique, j'ai intégré la Paris School Technology & Business afin d'y préparer un BTS SIO en alternance, spécialisé en systèmes, réseaux et infrastructure informatique.</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="parcours-title" style="margin-top:3rem;">Expériences en entreprise</div>
+      <div class="parcours-list">
+
+        <!-- Mon Juridique -->
+        <div class="parcours-item" id="r4">
+          <div class="parcours-year">2024 – 2025</div>
+          <div class="parcours-logo-wrap">
+            <img src="https://static.wixstatic.com/media/667df2_393aa152a8234773be4bbacb618c62a4~mv2.jpg" alt="Mon Juridique" />
+          </div>
+          <div class="parcours-content">
+            <div class="parcours-org"><a href="https://www.mon-juridique.com/" target="_blank">Mon Juridique — Nogent-sur-Marne</a></div>
+            <div class="parcours-role">Technicien Informatique</div>
+            <div class="parcours-desc">Basée à Nogent-sur-Marne, Mon Juridique propose une gamme complète de services allant des conseils juridiques à la gestion d'entreprise, en passant par la comptabilité et la domiciliation d'entreprise.</div>
+          </div>
+        </div>
+
+        <!-- Labrenne -->
+        <div class="parcours-item" id="r5">
+          <div class="parcours-year">2025 – Présent</div>
+          <div class="parcours-logo-wrap">
+            <img src="https://static.wixstatic.com/media/667df2_ddb05c8e56ab4af0af1630aff5edd32a~mv2.jpg" alt="Labrenne" />
+          </div>
+          <div class="parcours-content">
+            <div class="parcours-org"><a href="https://www.labrenne.fr/" target="_blank">Labrenne — Île-de-France</a></div>
+            <div class="parcours-role">Technicien Informatique</div>
+            <div class="parcours-desc">Labrenne est une entreprise familiale française spécialisée dans la propreté et le multiservice, intervenant principalement en Île-de-France et dans les Hauts-de-France. Elle propose des solutions d'entretien et de maintenance durable pour les bureaux, copropriétés, industries et établissements de santé.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd898f9c928f98849c898998bd9a909c9491d39e9290">[email&#160;protected]</a> · Paris, France</span>
+    <span><a href="http://www.linkedin.com/in/yatté-traore-b5aa9431b" target="_blank">LinkedIn →</a></span>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const observer = new IntersectionObserv
