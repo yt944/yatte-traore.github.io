@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projets — Yatté Traoré</title>
-  <meta name="description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance et GLPI — BTS SIO.">
-  <meta name="keywords" content="Yatté Traoré, BTS SIO, SISR, portfolio, systèmes réseaux, Active Directory, Paris, alternance">
+  <meta name="description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance, GLPI et partages Samba — BTS SIO.">
+  <meta name="keywords" content="Yatté Traoré, BTS SIO, SISR, portfolio, systèmes réseaux, Active Directory, Samba, Paris, alternance">
   <meta name="author" content="Yatté Traoré">
   <meta property="og:title" content="Projets — Yatté Traoré">
-  <meta property="og:description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance et GLPI — BTS SIO.">
+  <meta property="og:description" content="Projets techniques de Yatté Traoré : Active Directory, GPO, Virtualisation, Bureau à distance, GLPI et partages Samba — BTS SIO.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e8580c'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-size='14' font-weight='700' font-family='sans-serif'>YT</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -110,7 +110,7 @@
   <div class="page-header">
     <div class="page-tag">Projets</div>
     <h1 class="page-title">Mes réalisations</h1>
-    <p class="page-desc">5 projets techniques réalisés dans le cadre de mon BTS SIO.</p>
+    <p class="page-desc">6 projets techniques réalisés dans le cadre de mon BTS SIO.</p>
   </div>
 
   <div class="wave-sep" style="background:#f2ede4;"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,20 C360,55 1080,5 1440,35 L1440,60 L0,60 Z" fill="#faf7f2"/></svg></div>
@@ -151,8 +151,36 @@
         <div class="project-tags"><span class="tag">GLPI</span><span class="tag">Debian 13</span><span class="tag">Infrastructure</span></div>
         <a href="guide_glpi.pdf" target="_blank" class="project-link">Voir le guide →</a>
       </div>
+      <div class="project-card">
+        <div class="project-num">06</div>
+        <div class="project-title">Partages Samba</div>
+        <div class="project-desc">Mise en place de partages réseau avec Samba afin de permettre l’accès contrôlé à des dossiers partagés depuis différents postes clients.</div>
+        <div class="project-tags"><span class="tag">Samba</span><span class="tag">Linux</span><span class="tag">Partage réseau</span></div>
+        <a href="partagesamba_v2.docx" target="_blank" class="project-link">Voir la documentation →</a>
+      </div>
       
   </div>
 
+  </div>
+
   <footer>
-    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6c2c4d7d9c4d3cfd7c2c2d3f6d1dbd7dfda98d5d9db">[email&#160;protected]
+    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6c2c4d7d9c4d3cfd7c2c2d3f6d1dbd7dfda98d5d9db">[email&#160;protected]</a></span>
+    <span>Portfolio BTS SIO SISR — Yatté Traoré</span>
+  </footer>
+
+  <button class="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
