@@ -38,13 +38,45 @@
     .nav-links a.active { color: var(--accent); }
     .nav-links a.active::after { width: 100%; }
     .nav-cta { background: var(--accent); color: #fff; padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; text-decoration: none; font-family: var(--font-display); transition: transform 0.2s, box-shadow 0.2s; }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(249,115,22,0.3); }.page-header { padding: 8rem 3rem 3rem; border-bottom: 1px solid var(--border); position: relative; background: linear-gradient(135deg, rgba(250,247,242,0.90) 0%, rgba(250,247,242,0.72) 100%), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80') center/cover no-repeat; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(249,115,22,0.3); }
+    
+    .page-header { padding: 8rem 3rem 3rem; border-bottom: 1px solid var(--border); position: relative; background: linear-gradient(135deg, rgba(250,247,242,0.90) 0%, rgba(250,247,242,0.72) 100%), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80') center/cover no-repeat; }
     .page-header .page-tag, .page-header .page-title, .page-header .page-desc { position: relative; z-index: 1; }
     .page-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
     .page-tag::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
     .page-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1rem; }
     .page-desc { color: var(--muted); max-width: 540px; line-height: 1.7; }
+    
+    .wave { width: 100%; overflow: hidden; line-height: 0; display: block; background: var(--bg2); }
+    .wave svg { display: block; width: 100%; }
+    
     .page-content { padding: 4rem 3rem; }
+    
+    /* SYNTHESE LAYOUT */
+    .synthese-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 4rem; }
+    
+    .synthese-left { display: flex; flex-direction: column; gap: 1.5rem; }
+    .synthese-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .synthese-label::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
+    .synthese-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; color: var(--text); }
+    .synthese-desc { color: var(--muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    
+    .info-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.5rem; }
+    .info-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.2rem; }
+    .info-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .info-value { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    
+    .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2rem; border-radius: 100px; font-weight: 600; font-size: 0.9rem; text-decoration: none; font-family: var(--font-display); display: inline-flex; align-items: center; gap: 0.5rem; transition: opacity 0.2s, transform 0.2s; }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
+    
+    /* IMAGE SYNTHESE */
+    .synthese-right { position: relative; }
+    .synthese-img-wrap { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 12px 40px rgba(232,88,12,0.1); }
+    .synthese-img-wrap img { width: 100%; height: auto; display: block; }
+    .img-caption { margin-top: 0.8rem; font-size: 0.78rem; color: var(--muted); text-align: center; font-style: italic; }
+    .img-badge { position: absolute; top: -12px; right: -12px; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 100px; box-shadow: 0 4px 12px rgba(232,88,12,0.3); }
+    
+    /* PROJECTS GRID */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
     .project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
     .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #e8580c, #8b3cf7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
@@ -57,20 +89,22 @@
     .tag { background: var(--bg3); border: 1px solid var(--border); padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.75rem; color: var(--muted); }
     .project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; transition: gap 0.2s; }
     .project-link:hover { gap: 0.7rem; }
+    
+    /* SECTION SEPARATOR */
+    .section-separator { margin: 3rem 0; padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .section-separator-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .section-separator-title::before { content: ''; display: block; width: 20px; height: 1px; background: linear-gradient(90deg, #e8580c, #8b3cf7); }
+    
     footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
     footer a { color: var(--muted); text-decoration: none; }
-    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .page-header, .page-content { padding-left: 1.5rem; padding-right: 1.5rem; } }
+    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .page-header, .page-content { padding-left: 1.5rem; padding-right: 1.5rem; } .synthese-grid { grid-template-columns: 1fr; gap: 2rem; } .info-cards { grid-template-columns: 1fr; } }
   
     .reveal { opacity: 1; transform: none; }
-    
-    
-    
     
     .wave-sep { width: 100%; overflow: hidden; line-height: 0; margin: 0; display: block; }
     .wave-sep svg { display: block; width: 100%; }
     .wave-sep-flip { transform: rotate(180deg); }
 
-  
     /* BACK TO TOP */
     .back-top { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; background: var(--accent); color: #fff; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 1; transform: none; transition: box-shadow 0.2s; z-index: 200; box-shadow: 0 4px 14px rgba(232,88,12,0.3); }
     
@@ -110,11 +144,59 @@
   <div class="page-header">
     <div class="page-tag">Projets</div>
     <h1 class="page-title">Mes réalisations</h1>
-    <p class="page-desc">8 projets techniques réalisés dans le cadre de mon BTS SIO.</p>
+    <p class="page-desc">Tableau de synthèse et 8 projets techniques réalisés dans le cadre de mon BTS SIO.</p>
   </div>
 
-  <div class="wave-sep" style="background:#f2ede4;"><svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,20 C360,55 1080,5 1440,35 L1440,60 L0,60 Z" fill="#faf7f2"/></svg></div>
-<div class="page-content">
+  <div class="wave"><svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,20 C360,55 1080,5 1440,35 L1440,40 L0,40 Z" fill="#faf7f2"/></svg></div>
+
+  <div class="page-content">
+    <!-- SYNTHESE SECTION -->
+    <div class="synthese-grid">
+      <!-- GAUCHE : infos + bouton -->
+      <div class="synthese-left" id="r0">
+        <div>
+          <div class="synthese-label">Épreuve E5</div>
+          <h2 class="synthese-title">Tableau de synthèse des compétences</h2>
+          <p class="synthese-desc">Ce tableau de synthèse récapitule l'ensemble des compétences et situations professionnelles développées au cours de mon BTS SIO, dans le cadre de l'épreuve E5.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-label">Épreuve</div>
+            <div class="info-value">BTS SIO — E5</div>
+          </div>
+          <div class="info-card">
+            <div class="info-label">Type</div>
+            <div class="info-value">Tableau de synthèse</div>
+          </div>
+          <div class="info-card">
+            <div class="info-label">Formation</div>
+            <div class="info-value">BTS SIO SISR</div>
+          </div>
+          <div class="info-card">
+            <div class="info-label">Établissement</div>
+            <div class="info-value">Paris School T&B</div>
+          </div>
+        </div>
+        <a href="./synthese_e5.pdf" target="_blank" class="btn-primary">Voir le tableau de synthèse →</a>
+      </div>
+
+      <!-- DROITE : image -->
+      <div class="synthese-right" id="r1">
+        <div class="img-badge">Tableau de synthèse</div>
+        <div class="synthese-img-wrap">
+          <a href="./synthese_e5.pdf" target="_blank">
+            <img src="./preview_synthese_e5.png" alt="Tableau de synthèse E5" />
+          </a>
+        </div>
+        <p class="img-caption">Cliquez sur l'image pour ouvrir le tableau de synthèse complet en PDF</p>
+      </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="section-separator">
+      <div class="section-separator-title">Projets techniques</div>
+    </div>
+
     <div class="projects-grid">
       <div class="project-card">
         <div class="project-num">01</div>
@@ -172,9 +254,7 @@
         <div class="project-tags"><span class="tag">DHCP</span><span class="tag">Windows Server</span><span class="tag">Infrastructure réseau</span></div>
         <a href="MISSION_E5_DHCP.pdf" target="_blank" class="project-link">Voir la documentation →</a>
       </div>
-      
-  </div>
-
+    </div>
   </div>
 
   <footer>
