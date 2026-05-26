@@ -64,6 +64,21 @@
     .img-caption { margin-top: 0.8rem; font-size: 0.78rem; color: var(--muted); text-align: center; font-style: italic; }
     .img-badge { position: absolute; top: -12px; right: -12px; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 100px; box-shadow: 0 4px 12px rgba(232,88,12,0.3); }
 
+    /* MISSIONS GRID */
+    .missions-section { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+    .missions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .mission-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .mission-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #e8580c, #8b3cf7); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+    .mission-card:hover { border-color: rgba(232,88,12,0.25); transform: translateY(-3px); }
+    .mission-card:hover::before { transform: scaleX(1); }
+    .mission-num { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; color: var(--accent); opacity: 0.6; margin-bottom: 1rem; letter-spacing: 0.1em; }
+    .mission-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; }
+    .mission-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .mission-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+    .tag { background: var(--bg3); border: 1px solid var(--border); padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.75rem; color: var(--muted); }
+    .mission-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; transition: gap 0.2s; }
+    .mission-link:hover { gap: 0.7rem; }
+
     footer { padding: 2rem 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-top: 4rem; }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--accent); }
@@ -167,6 +182,25 @@
       </div>
 
     </div>
+
+    <!-- SECTION MISSIONS -->
+    <div class="missions-section">
+      <div class="synthese-label">Missions pratiques</div>
+      <h2 class="synthese-title" style="margin-bottom: 2rem;">Missions réalisées</h2>
+      <div class="missions-grid">
+        <div class="mission-card">
+          <div class="mission-num">01</div>
+          <div class="mission-title">Réinitialisation d'un mot de passe sur l'AD</div>
+          <div class="mission-desc">Procédure complète de réinitialisation de mot de passe utilisateur via la console Active Directory, incluant l'authentification administrateur et la gestion des comptes.</div>
+          <div class="mission-tags">
+            <span class="tag">Active Directory</span>
+            <span class="tag">Gestion des comptes</span>
+            <span class="tag">Sécurité</span>
+          </div>
+          <a href="./DOCPROJETrenitialisationmotdepasse.pdf" target="_blank" class="mission-link">Voir la documentation →</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -175,4 +209,15 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const observer = new IntersectionObserve
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[id^="r"]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
